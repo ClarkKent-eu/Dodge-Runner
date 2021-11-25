@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DeatCounter : MonoBehaviour
+public class DeathCounter : MonoBehaviour
 {
     private int Death;
-    public TextMeshProUGUI DeathCounter;
+    public TextMeshProUGUI DeathCounter1;
 
 
     // Start is called before the first frame update
@@ -16,9 +16,7 @@ public class DeatCounter : MonoBehaviour
 
 
  
-        Death = 0;
-        DeathCounter.text = "DeathCounter:" + Death;
-
+        UpdateDeath(0);
     
         
     }
@@ -27,7 +25,7 @@ public class DeatCounter : MonoBehaviour
     {
 
         Death += DeathToAdd;
-        DeathCounter.text = "Score: " + Death;
+        DeathCounter1.text = "Deaths: " + Death;
 
 
 
