@@ -27,14 +27,6 @@ public class GameOver : MonoBehaviour
     }
 
 
-    public void gameOver()
-    {
-
-
-        gameOverText.gameObject.SetActive(true);
-
-
-    }
 
 
     private void OnTriggerEnter(Collider other)
