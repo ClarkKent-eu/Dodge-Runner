@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 
     public float speed = 40.0f;
     private Rigidbody playerRb;
-    public float jumpForce;
+    public float jumpForce = 17;
     public float gravityModifier;
     public bool isOnGround = true;
 
