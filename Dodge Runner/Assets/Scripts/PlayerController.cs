@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+
+    public TextMeshPro GameOver;
 
     public float speed = 40.0f;
     private Rigidbody playerRb;
@@ -12,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool isOnGround = true;
     private Vector3 startPos;
     public bool gameOver = false;
+
 
 
     // Start is called before the first frame update
@@ -62,8 +68,8 @@ public class PlayerController : MonoBehaviour
             gameOver = true;
             Debug.Log("Game Over!");
             Destroy(gameObject);
-        
-
+            gameObject.SetActive(true);
+            GameOver.text = "Game Over";
 
 
 

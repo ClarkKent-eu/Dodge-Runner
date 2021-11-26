@@ -9,14 +9,13 @@ public class GameManager : MonoBehaviour
 {
 
 
-
+    public List<GameObject> targets;
     public Button restartButton;
     public TextMeshproUGUI gameOverText;
+    private object gameManager;
+    public object GameOver;
 
-
-
-
-    public void GameOver()
+    public void GameOver1()
     {
 
         restartButton.gameObject.SetActive(true);
@@ -37,13 +36,33 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
 
-        
 
 
     }
 
+
+    public void gameOver()
+    {
+
+
+        gameOverText.gameObject.Equals(true);
+
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(gameObject);
+        if (!gameObject.CompareTag("GameOver"))
+        {
+         
+
+
+        }
+
+
+    }
 
 
 
