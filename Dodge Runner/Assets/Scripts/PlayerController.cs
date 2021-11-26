@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)//When the space bar is pressed the player exert a jumpforce 
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
@@ -64,8 +64,10 @@ public class PlayerController : MonoBehaviour
 
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
+            //If the player coolides with the obstacle "an object with the tag osbstacle"
 
             gameOver = true;
+            //Game Over 
             Debug.Log("Game Over!");
             Destroy(gameObject);
             gameObject.SetActive(true);
